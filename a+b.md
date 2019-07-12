@@ -10,23 +10,24 @@
 
 1. 方法一，两个for循环暴力跑.复杂度 O（n*n）
 
-`class Solution {`
-`public:`
-   `vector<int> twoSum(vector<int>&nums, int target) {`
-        `for (int i = 0;i < nums.size() ;i++ ){`
-          `for ( int j = i + 1 ; j < nums.size() ; j++ ){`  
-              `if(nums[i] + nums[j] == target ){`
-                  `vector<int>tmp;`
-                  `tmp.push_back(i);`
-                  `tmp.push_back(j);`
-                  `return tmp;`
-              `}`
-          `}`
-        `}` 
-       `vector<int>tmp;`
-       `return tmp;
-   `}`
-`};`
+class Solution {
+public:
+   vector<int> twoSum(vector<int>&nums, int target) {
+        for (int i = 0;i < nums.size() ;i++ ){
+          for ( int j = i + 1 ; j < nums.size() ; j++ ){
+              if(nums[i] + nums[j] == target ){
+                  vector<int>tmp;
+                  tmp.push_back(i);
+                  tmp.push_back(j);
+                  return tmp;
+              }
+          }
+        }
+       vector<int>tmp;
+       return tmp;
+   
+
+};
 
 2. 方法二，这个方法适用于样例中的数都比较小的时候。打一个桶，储存每个值都在哪些位置出现过，然后遍历两边数组就可以了。空间换时间。复杂度O（2n）
 
