@@ -14,7 +14,7 @@
 `public:`
    `vector<int> twoSum(vector<int>&nums, int target) {`
         `for (int i = 0;i < nums.size() ;i++ ){`
-          `for ( int j = i + 1 ; j < nums.size() ; j++ ){`  // 注意要从i + 1开始，必须是两个不同的数
+          `for ( int j = i + 1 ; j < nums.size() ; j++ ){`  
               `if(nums[i] + nums[j] == target ){`
                   `vector<int>tmp;`
                   `tmp.push_back(i);`
@@ -24,7 +24,7 @@
           `}`
         `}` 
        `vector<int>tmp;`
-       `return tmp;`// 注意代码的严谨，即使一定有合法值存在也一定要返回一个合理的值.
+       `return tmp;
    `}`
 `};`
 
